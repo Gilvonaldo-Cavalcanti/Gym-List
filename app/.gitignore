@@ -31,7 +31,7 @@ npm-debug.log*
 /www
 
 /src/environments/environment.ts
-
+/src/environments/environment.prod.ts
 /e2e
 
 
