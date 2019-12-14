@@ -1,0 +1,62 @@
+<ion-content>
+
+
+  <div class="container">
+
+    <div class="logo" [hidden]="keyboard.isVisible">
+        <img src="/assets/img/logo-gym.png">
+    </div>
+    
+    <div class="container-segment">
+      
+        <ion-segment (ionChange)="segmentChanged($event)" value="login" color="light">
+          <ion-segment-button value="login">
+            <ion-label>Login</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="cadastro">
+            <ion-label>Cadastro</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+      
+    </div>
+
+    <ion-slides class="swiper-no-swiping">
+      <ion-slide>
+        <div class="slide-inner ion-padding">
+          <ion-item class="ion-margin-top" lines="none">
+            <ion-input type="email" placeholder="E-Mail" [(ngModel)]="userLogin.email"></ion-input>
+          </ion-item>
+          <ion-item class="ion-margin-top" lines="none">
+            <ion-input type="password" placeholder="Senha" [(ngModel)]="userLogin.password"></ion-input>
+          </ion-item>
+        
+          <ion-button class="ion-margin-top" (click)="login()" color="light" expand="block">
+            Entrar
+          </ion-button>
+
+          <div>
+              <p size="small" style="color: #ffffff;" [routerLink]="['/esqueci-senha']">Esqueci minha senha</p>
+            </div>
+              
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="slide-inner ion-padding">
+          <ion-item class="ion-margin-top" lines=none>
+            <ion-input type="text" placeholder="Nome" [(ngModel)]="userRegister.nome"></ion-input>
+          </ion-item>
+          <ion-item class="ion-margin-top" lines=none>
+            <ion-input type="email" placeholder="E-Mail" [(ngModel)]="userRegister.email"></ion-input>
+          </ion-item>
+          <ion-item class="ion-margin-top" lines=none>
+            <ion-input type="password" placeholder="Senha" [(ngModel)]="userRegister.password"></ion-input>
+          </ion-item>
+          <ion-button class="ion-margin-top" (click)="register()" color="light" expand="block">
+            Cadastrar
+          </ion-button>
+        </div>
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+</ion-content>

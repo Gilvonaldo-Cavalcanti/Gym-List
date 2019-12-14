@@ -1,0 +1,51 @@
+<ion-app>
+  <ion-split-pane>
+
+    <ion-menu >
+      
+      <ion-content>
+          
+        <div class="menu-header" color="menu-superior">  
+          
+            <img class="img" src="/assets/img/logo-gym.png">
+          
+        </div>
+
+        <ion-list>
+
+          <ion-item button (click)="closeMenu()" [routerLink]="['perfil']">
+            <ion-icon color="menu-superior" name="person"></ion-icon>
+            <ion-label>Meu Perfil</ion-label>
+          </ion-item>
+
+          <ion-item button (click)="closeMenu()" [routerLink]="['treinosarquivados']">
+            <ion-icon color="menu-superior" name="archive"></ion-icon>
+              <ion-label>Fichas Arquivadas</ion-label>
+          </ion-item>
+
+          <ion-item  button (click)="closeMenu()" [routerLink]="['avaliacoesarquivadas']">
+            <ion-icon color="menu-superior" name="archive"></ion-icon>
+            <ion-label>Avaliações Arquivadas</ion-label>
+          </ion-item>
+          
+          <ion-item  button (click)="presentAlert()">
+            <ion-icon color="menu-superior" name="information-circle-outline"></ion-icon>
+            <ion-label>Sobre</ion-label>
+          </ion-item>
+
+
+        </ion-list>
+      </ion-content>
+
+      <ion-footer>
+        <ion-toolbar>
+          <ion-button color="menu-superior" (click)='sair()' fill="clear" expand="block">Sair</ion-button>
+        </ion-toolbar>
+
+      </ion-footer>
+
+    </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
+
+</ion-app>

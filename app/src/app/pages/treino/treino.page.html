@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar color="menu-superior">
+    <ion-title>Adicionar Treino</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label>Dia da Semana</ion-label>
+      <ion-select placeholder="Dia" [(ngModel)]="treino.dia" >
+        <ion-select-option value="Domingo">Domingo</ion-select-option>
+        <ion-select-option value="Segunda-Feira">Segunda-Feira</ion-select-option>
+        <ion-select-option value="Terça-Feira">Terça-Feira</ion-select-option>
+        <ion-select-option value="Quarta-Feira">Quarta-Feira</ion-select-option>
+        <ion-select-option value="Quinta-Feira">Quinta-Feira</ion-select-option>
+        <ion-select-option value="Sexta-Feira">Sexta-Feira</ion-select-option>
+        <ion-select-option value="Sabado">Sábado</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" [(ngModel)]="treino.nomeTreino" placeholder="Grupo Muscular"></ion-input>
+    </ion-item>
+  </ion-list>
+
+
+  <ion-list lines="none">
+    <form [formGroup]="myForm">
+      <ion-item *ngFor="let control of myForm.controls | keyvalue">
+
+        <ion-input required type="text" [formControlName]="control.key" placeHolder="Nome do Exercício"></ion-input>
+        <ion-icon (click)="removeControl(control)" name="close-circle"></ion-icon>
+
+      </ion-item>
+    </form>
+
+  </ion-list>
+  <ion-button expand="full" color="light" (click)="addControl()">Adicionar Exercício</ion-button>
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button (click)="salvarTreino()" expand="block" color="light">
+      Salvar
+    </ion-button>
+
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,121 @@
+ion-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 90px 1px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 1;
+}
+ion-menu-button {
+    z-index: 2;
+}
+
+ion-icon {
+    z-index: 2;
+    font-size: 23px;
+    padding: 5%;
+}
+
+.fundo-registro {
+    background-image: url('/assets/img/images.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 10%;
+}
+
+.conclusao-semanal {
+
+    width: 100%;
+    align-items: center;
+    background-color: #e6e6e6;
+    padding: 5%;
+    text-align: center;
+}
+
+.dia {
+    margin-top: 0;
+    font-size: 10px;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+.circulo {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    background-color: #787373;
+    margin: auto;
+    padding: 40px;
+    background: linear-gradient(bottom, #E0E0E0, #F9F9F9 70%);
+    box-shadow: 3px 5px #888888;
+}
+
+.descanso {
+
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: #787373;
+    margin: auto;
+    padding: 2%;
+    background: linear-gradient(bottom, #E0E0E0, #F9F9F9 70%);
+    box-shadow: 3px 5px #888888;
+    margin-top: 2%;
+}
+
+.circulo:active {
+    position:relative;
+    top:2px;
+}
+
+.descanso:active {
+    position:relative;
+    top:2px;
+}
+
+.gamificacao {
+    margin-top: 0;
+    
+}
+
+.ion-color-cor-conclusao-semanal {
+    --ion-color-base: var(--ion-color-cor-conclusao-semanal);
+    --ion-color-base-rgb: var(--ion-color-cor-conclusao-semanal-rgb);
+    --ion-color-contrast: var(--ion-color-cor-conclusao-semanal-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-cor-conclusao-semanal-contrast-rgb);
+    --ion-color-shade: var(--ion-color-cor-conclusao-semanal-shade);
+    --ion-color-tint: var(--ion-color-cor-conclusao-semanal-tint);
+  }
+
+
+.ion-color-menu-superior {
+    --ion-color-base: var(--ion-color-menu-superior);
+    --ion-color-base-rgb: var(--ion-color-menu-superior-rgb);
+    --ion-color-contrast: var(--ion-color-menu-superior-contrast);
+    --ion-color-contrast-rgb: var(--ion-color-menu-superior-contrast-rgb);
+    --ion-color-shade: var(--ion-color-menu-superior-shade);
+    --ion-color-tint: var(--ion-color-menu-superior-tint);
+}
+
+.img {
+    width: 10%;
+    height: 10%;
+}
+
+.dica {
+   width: 100%;
+   background-color: #e6e6e6;
+   padding: 5%;
+
+    .p {
+        text-align: left;
+
+    }
+}
+
+.recuo { 
+    text-indent: 3em;
+}

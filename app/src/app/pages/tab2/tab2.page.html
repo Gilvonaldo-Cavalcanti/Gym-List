@@ -1,0 +1,137 @@
+<ion-header>
+  <ion-toolbar color="menu-superior">
+    <ion-menu-button slot="start"></ion-menu-button>
+    <ion-title>
+      Treinos Realizados
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <div class="fundo-registro">
+
+    <div class="circulo" (click)="registrarTreino()">
+      <img src="/assets/img/halter.png">
+    </div>
+  
+    <div class="descanso" (click)="registrarDescanso()">
+      <img src="/assets/img/descanso.png">
+    </div>
+
+  </div>
+  
+
+  <div class="conclusao-semanal">
+    <h5 class="ion-text-center">Conclusão Semanal</h5>
+    <ion-row>
+      <ion-col>
+        <ion-icon name="checkmark-circle" [color]="conclusaoSemanal.domingo ? 'cor-conclusao-semanal' : 'secundary'"></ion-icon>
+        <ion-label>
+          <div class="dia">
+            Domingo
+          </div>
+        </ion-label>
+      </ion-col>
+
+      <ion-col>
+        <ion-icon name="checkmark-circle" [color]="conclusaoSemanal.segunda ? 'cor-conclusao-semanal' : 'secundary'"></ion-icon>
+        <ion-label>
+          <div class="dia">
+            Segunda
+          </div>
+        </ion-label>
+      </ion-col>
+
+      <ion-col>
+        <ion-icon name="checkmark-circle" [color]="conclusaoSemanal.terca ? 'cor-conclusao-semanal' : 'secundary'"></ion-icon>
+        <ion-label>
+          <div class="dia">
+            Terça
+          </div>
+        </ion-label>
+      </ion-col>
+
+      <ion-col>
+        <ion-icon name="checkmark-circle" [color]="conclusaoSemanal.quarta ? 'cor-conclusao-semanal' : 'secundary'"></ion-icon>
+        <ion-label>
+          <div class="dia">
+            Quarta
+          </div>
+        </ion-label>
+      </ion-col>
+
+      <ion-col>
+        <ion-icon name="checkmark-circle" [color]="conclusaoSemanal.quinta ? 'cor-conclusao-semanal' : 'secundary'"></ion-icon>
+        <ion-label>
+          <div class="dia">
+            Quinta
+          </div>
+        </ion-label>
+      </ion-col>
+
+      <ion-col>
+        <ion-icon name="checkmark-circle" [color]="conclusaoSemanal.sexta ? 'cor-conclusao-semanal' : 'secundary'"></ion-icon>
+        <ion-label>
+          <div class="dia">
+            Sexta
+          </div>
+        </ion-label>
+      </ion-col>
+
+      <ion-col>
+        <ion-icon name="checkmark-circle" [color]="conclusaoSemanal.sabado ? 'cor-conclusao-semanal' : 'secundary'"></ion-icon>
+        <ion-label>
+          <div class="dia">
+            Sábado
+          </div>
+        </ion-label>
+      </ion-col>
+
+    </ion-row>
+  </div>
+
+  <div class="gamificacao">
+    <h5 class="ion-text-center">
+      Estatísticas
+    </h5>
+
+    <ion-list>
+
+      <ion-item>
+        Nível:
+        <ion-note slot="end">{{ registreino.nivel || 'Iniciante' }}</ion-note>
+      </ion-item>
+
+      <ion-item>
+        Pontuação:
+        <ion-note slot="end">{{ registreino.pontuacao || 0 }}</ion-note>
+      </ion-item>
+
+      <ion-item>
+        Ofensiva:
+        <ion-note slot="end">{{ registreino.ofensiva || 0 }}</ion-note>
+      </ion-item>
+
+      <ion-item>
+        Dias de descanso:
+        <ion-note slot="end">{{ registreino.diasDeDescanso || 0 }}</ion-note>
+      </ion-item>
+      <ion-item>
+        Total de dias de treino:
+        <ion-note slot="end">{{ registreino.totalDeDiasDeTreino || 0 }}</ion-note>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <div class="info-premiacoes">
+
+  </div>
+
+  <div class="dica">
+    <h5 class="ion-text-center">Dica</h5>
+    <p class="text-info recuo">
+      Lembre-se que o melhor momento para começar é sempre AGORA.
+    </p>
+  </div>
+
+</ion-content>
