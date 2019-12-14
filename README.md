@@ -25,7 +25,7 @@ Pequeno projeto de aprendizagem em Ionic, desenvolvido durante o desafio #100Day
       <td><img src="/app/Imagens do App/Tela de adicionar fichas de treinos.jpeg" height="150" width="100"></td>
 		</tr>
 		<tr>
-			<td>Progresso</td>
+			<td>Progresso e avaliação</td>
 			<td><img src="/app/Imagens do App/Progresso.jpeg" height="150" width="100"></td>
       <td><img src="/app/Imagens do App/Avaliação.jpeg" height="150" width="100"></td>
 		</tr>
